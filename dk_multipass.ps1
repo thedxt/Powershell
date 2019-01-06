@@ -7,6 +7,7 @@ $loop = 0;
  Write-Host "3. File and Printer Sharing Firewall Rules"
  Write-Host "4. Sleep Settings"
  Write-Host "5. Set Timezone to Mountain Time"
+ Write-Host "6. Turn Off Firewall"
  Write-Host "type exit to exit"
  $menu_1 = Read-host "Enter your selection"
  
@@ -232,6 +233,13 @@ switch ($menu_1)
             "`n `n";
             break;
    }
+6 {
+    "`n `n";
+     "Turning off firewall";
+             Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
+            "`n `n";
+            break;
+            }
 
 
         exit {
