@@ -6,8 +6,7 @@ this will list all the installed programs and save the list to C:\ as a CSV file
 * it will not list dumb programs that are installed to a user's AppData folder
 
 ## DK Multipass
-this is tool that does many things like firewall settings and timezones and sleep settings
-Current Functions
+this is tool that does many things like firewall settings and timezones and sleep settings. Below are the current functions and their sub menus
 * Remote Event Log Management Firewall Rules
   * checking the status
   * turning it on
