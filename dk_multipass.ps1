@@ -1,10 +1,12 @@
 #The DK Multipass
 while ($loop -ne 99) {
 $loop = 0;
- Write-Host "Welcome to the DK Mulitpass"
+ Write-Host "Welcome to the DK Mulitpass v1.02"
  Write-Host "1. Remote Event Log Management Firewall Rules"
  Write-Host "2. Remote Desktop Firewall Rules"
  Write-Host "3. File and Printer Sharing Firewall Rules"
+ Write-Host "4. Sleep Settings"
+ Write-Host "5. Set Timezone to Mountain Time"
  Write-Host "type exit to exit"
  $menu_1 = Read-host "Enter your selection"
  
@@ -164,6 +166,74 @@ switch ($menu_1)
             break;
             }
             }}}
+         4 { Clear-Host 
+            while ($loop -ne 98) {
+                                    Write-host "Sleep Settings"
+                                    Write-host "1. Turn off Every single possible sleep setting"
+                                    Write-host "2. Turn Off system hibernate and standby sleep settings"
+                                    Write-host "3. Turn Off disk sleep settings"
+                                    Write-Host "type exit to exit or back to go back"
+                                    $die_sleep_select = Read-host "Enter your selection"
+
+                                    Write-Host " "
+          
+           switch ($die_sleep_select)
+           {
+         1 {
+            "`n `n";
+            "Turning off Every single possible sleep setting";
+             powercfg.exe -x -monitor-timeout-ac 0
+             powercfg.exe -x -monitor-timeout-dc 0
+             powercfg.exe -x -disk-timeout-ac 0
+             powercfg.exe -x -disk-timeout-dc 0
+             powercfg.exe -x -standby-timeout-ac 0
+             powercfg.exe -x -standby-timeout-dc 0
+             powercfg.exe -x -hibernate-timeout-ac 0
+             powercfg.exe -x -hibernate-timeout-dc 0
+            "`n `n";
+            break;
+            }
+        2 {
+           "`n `n";
+            "Turning Off system hibernate and standby sleep settings";
+             powercfg.exe -x -standby-timeout-ac 0
+             powercfg.exe -x -standby-timeout-dc 0
+             powercfg.exe -x -hibernate-timeout-ac 0
+             powercfg.exe -x -hibernate-timeout-dc 0
+            "`n `n";
+            break;
+            } 
+        3 {
+            "`n `n";
+            "Turning Off disk sleep settings";
+             powercfg.exe -x -disk-timeout-ac 0
+             powercfg.exe -x -disk-timeout-dc 0
+            "`n `n";
+            break;
+          } 
+        exit {
+                exit;
+                break;
+            } 
+	    back {
+                clear;
+                $loop = 98;
+                break;
+            } 
+            default {
+            "** The selection could not be determined **";
+            break;
+            }
+            }}}
+5 {
+    "`n `n";
+     "Setting Timezone to Mountain Time";
+             TZUTIL /s "Mountain Standard Time"
+            "`n `n";
+            break;
+   }
+
+
         exit {
            exit;
            break;
