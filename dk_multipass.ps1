@@ -1,13 +1,16 @@
 #The DK Multipass
 while ($loop -ne 99) {
 $loop = 0;
- Write-Host "Welcome to the DK Mulitpass v1.02"
+ Write-Host "Welcome to the DK Mulitpass v1.03"
  Write-Host "1. Remote Event Log Management Firewall Rules"
  Write-Host "2. Remote Desktop Firewall Rules"
  Write-Host "3. File and Printer Sharing Firewall Rules"
  Write-Host "4. Sleep Settings"
  Write-Host "5. Set Timezone to Mountain Time"
  Write-Host "6. Turn Off Firewall"
+ Write-Host "7. Veeam Services"
+ Write-Host "8. Restart Explorer.exe"
+ Write-Host "9. Processes"
  Write-Host "type exit to exit"
  $menu_1 = Read-host "Enter your selection"
  
@@ -226,21 +229,119 @@ switch ($menu_1)
             break;
             }
             }}}
-5 {
+         5 {
     "`n `n";
      "Setting Timezone to Mountain Time";
              TZUTIL /s "Mountain Standard Time"
             "`n `n";
             break;
    }
-6 {
+         6 {
     "`n `n";
      "Turning off firewall";
              Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
             "`n `n";
             break;
             }
+         7 { Clear-Host 
+            while ($loop -ne 98) {
+                                    Write-host "Veeam Services"
+                                    Write-host "1. Check Stauts of Veeam Services"
+                                    Write-host "2. Turn On Veeam Services"
+                                    Write-host "3. Turn Off Veeam Services"
+                                    Write-Host "type exit to exit or back to go back"
+                                    $veeam_select = Read-host "Enter your selection"
 
+                                    Write-Host " "
+          
+           switch ($veeam_select)
+           {
+         1 {
+            "`n `n";
+            "Stauts of Veeam Services";
+            Get-service -displayname veeam*
+            "`n `n";
+            break;
+            }
+        2 {
+           "`n `n";
+            "Turning On Veeam Services";
+            Get-service -displayname veeam* | start-service
+            Write-host "Veeam Services are On";
+            "`n `n";
+            break;
+            } 
+        3 {
+            "`n `n";
+            "Turning Off Veeam Services";
+            Get-service -displayname veeam* | stop-service
+            Write-host "Veeam Services are Off";
+            "`n `n";
+            break;
+          } 
+        exit {
+                exit;
+                break;
+            } 
+	    back {
+                clear;
+                $loop = 98;
+                break;
+            } 
+            default {
+            "** The selection could not be determined **";
+            break;
+            }
+            }}}
+         8 {
+    "`n `n";
+     "Restarting Explorer.exe";
+             Stop-Process -force -ProcessName explorer
+            "`n `n";
+            break;
+            }
+         9 { Clear-Host 
+            while ($loop -ne 98) {
+                                    Write-host "Processes"
+                                    Write-host "1. List all running Processes"
+                                    Write-host "2. Stop a Process"
+                                    Write-Host "type exit to exit or back to go back"
+                                    $Process_select = Read-host "Enter your selection"
+
+                                    Write-Host " "
+          
+           switch ($Process_select)
+           {
+         1 {
+            "`n `n";
+            "List all running Processes";
+            Get-Process
+            "`n `n";
+            break;
+            }
+        2 {
+           "`n `n";
+            "Killing Process";
+           $Process_Name=Read-Host "Type Name of Process";
+           Stop-Process -Force -Name $Process_Name
+            Write-host "Process has been terminated";
+            "`n `n";
+            break;
+            }  
+        exit {
+                exit;
+                break;
+            } 
+	    back {
+                clear;
+                $loop = 98;
+                break;
+            } 
+            default {
+            "** The selection could not be determined **";
+            break;
+            }
+            }}}
 
         exit {
            exit;
