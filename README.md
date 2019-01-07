@@ -19,19 +19,19 @@ this is tool that does many things like firewall settings and timezones and slee
   * checking the status
   * turning it on
   * turning it off
-* Sleep Settings
-  * turns off all sleep settings possible
-  * turns off system hibernate and standby sleep settings
-  * turns off disk sleep settings
+ * Sleep Settings
+   * turns off all sleep settings possible
+   * turns off system hibernate and standby sleep settings
+   * turns off disk sleep settings
 * Setting the timezone to Mountain Time
 * Turning off Firewall
 * Veeam Services
- * check veeam services status
- * stop veeam services
- * start veeam services
+  * check veeam services status
+  * stop veeam services
+  * start veeam services
 * Restarting Explorer.exe
 * Processes
- * lists all current processes
- * kill a process by name
+  * lists all current processes
+  * kill a process by name
 ### possible issue
 * You may need to set your PowerShell Execution Policy to Remote Signed. Run this command to fix it Set-ExecutionPolicy RemoteSigned
