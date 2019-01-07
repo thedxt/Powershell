@@ -5,7 +5,7 @@ this will list all the installed programs and save the list to C:\ as a CSV file
 ### known issues
 * it will not list dumb programs that are installed to a user's AppData folder
 
-## DK Multipass
+## DK Multipass v1.03
 this is tool that does many things like firewall settings and timezones and sleep settings. Below are the current functions and their sub menus
 * Remote Event Log Management Firewall Rules
   * checking the status
@@ -25,5 +25,13 @@ this is tool that does many things like firewall settings and timezones and slee
   * turns off disk sleep settings
 * Setting the timezone to Mountain Time
 * Turning off Firewall
+* Veeam Services
+ * check veeam services status
+ * stop veeam services
+ * start veeam services
+* Restarting Explorer.exe
+* Processes
+ * lists all current processes
+ * kill a process by name
 ### possible issue
 * You may need to set your PowerShell Execution Policy to Remote Signed. Run this command to fix it Set-ExecutionPolicy RemoteSigned
