@@ -1,7 +1,7 @@
 #The DK Multipass
 while ($loop -ne 99) {
 $loop = 0;
- Write-Host "Welcome to the DK Mulitpass v1.03"
+ Write-Host "Welcome to the DK Mulitpass v1.04"
  Write-Host "1. Remote Event Log Management Firewall Rules"
  Write-Host "2. Remote Desktop Firewall Rules"
  Write-Host "3. File and Printer Sharing Firewall Rules"
@@ -367,7 +367,7 @@ switch ($menu_1)
 #option 10
 10 { Clear-Host 
             while ($loop -ne 98) {
-                                    Write-host "Remote Admin Firewall Stuff"
+                                    Write-host "MMC Firewall Rules"
                                     Write-host "1. Check Stauts of the rules"
                                     Write-host "2. Allow MMC Firewall Stuff"
                                     Write-host "3. Block MMC Firewall Stuff"
