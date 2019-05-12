@@ -11,13 +11,16 @@ $loop = 0;
  Write-Host "7. Veeam Services"
  Write-Host "8. Restart Explorer.exe"
  Write-Host "9. Processes"
+ Write-Host "10. MMC Firewall Rules"
  Write-Host "type exit to exit"
  $menu_1 = Read-host "Enter your selection"
  
 Write-Host " "
  
+ 
 switch ($menu_1) 
     { 
+#option 1
          1 { Clear-Host
             while ($loop -ne 98) {
                                     Write-host "Remote Event Log Management Firewall Rules Settings"
@@ -68,6 +71,7 @@ switch ($menu_1)
             break;
             }
             }}}
+#Option 2
          2 { Clear-Host 
             while ($loop -ne 98) {
                                     Write-host "Remote Desktop Firewall Rules Settings"
@@ -92,7 +96,7 @@ switch ($menu_1)
            "`n `n";
             "Turning On Remote Desktop Firewall Rules and reg setting";
             Set-NetFirewallRule -DisplayGroup "Remote Desktop" -Enabled True
-            Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections" –Value 0
+            Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections" -Value 0
             Write-host "Remote Desktop Firewall Rules and reg setting are On";
             "`n `n";
             break;
@@ -101,7 +105,7 @@ switch ($menu_1)
             "`n `n";
             "Turning Off Remote Desktop Firewall Rules and reg setting";
             Set-NetFirewallRule -DisplayGroup "Remote Desktop" -Enabled False
-            Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections" –Value 1
+            Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections" -Value 1
             Write-host "Remote Desktop Firewall Rules and reg setting are Off";
             "`n `n";
             break;
@@ -120,6 +124,7 @@ switch ($menu_1)
             break;
             }
             }}}
+#option 3
          3 { Clear-Host 
             while ($loop -ne 98) {
                                     Write-host "File and Printer Sharing Firewall Rules"
@@ -170,6 +175,7 @@ switch ($menu_1)
             break;
             }
             }}}
+#option 4
          4 { Clear-Host 
             while ($loop -ne 98) {
                                     Write-host "Sleep Settings"
@@ -229,6 +235,7 @@ switch ($menu_1)
             break;
             }
             }}}
+#option 5
          5 {
     "`n `n";
      "Setting Timezone to Mountain Time";
@@ -236,6 +243,8 @@ switch ($menu_1)
             "`n `n";
             break;
    }
+
+  #Option 6
          6 {
     "`n `n";
      "Turning off firewall";
@@ -243,6 +252,7 @@ switch ($menu_1)
             "`n `n";
             break;
             }
+#option 7
          7 { Clear-Host 
             while ($loop -ne 98) {
                                     Write-host "Veeam Services"
@@ -293,6 +303,7 @@ switch ($menu_1)
             break;
             }
             }}}
+#option 8
          8 {
     "`n `n";
      "Restarting Explorer.exe";
@@ -300,6 +311,7 @@ switch ($menu_1)
             "`n `n";
             break;
             }
+#option 9
          9 { Clear-Host 
             while ($loop -ne 98) {
                                     Write-host "Processes"
@@ -351,6 +363,77 @@ switch ($menu_1)
           "** The selection could not be determined **";
           break;
           }
+
+#option 10
+10 { Clear-Host 
+            while ($loop -ne 98) {
+                                    Write-host "Remote Admin Firewall Stuff"
+                                    Write-host "1. Check Stauts of the rules"
+                                    Write-host "2. Allow MMC Firewall Stuff"
+                                    Write-host "3. Block MMC Firewall Stuff"
+                                    Write-Host "type exit to exit or back to go back"
+                                    $MMC_select = Read-host "Enter your selection"
+
+                                    Write-Host " "
+          
+           switch ($MMC_select)
+           {
+         1 {
+            "`n `n";
+            "Check Stauts of the rules";
+            Get-NetFirewallRule -DisplayGroup "Windows Defender Firewall Remote Management" |ft -AutoSize
+            Get-NetFirewallRule -DisplayGroup "Remote Volume Management" |ft -AutoSize
+            Get-NetFirewallRule -DisplayGroup "Performance Logs and Alerts" |ft -AutoSize
+            Get-NetFirewallRule -DisplayGroup "Remote Scheduled Tasks Management" |ft -AutoSize
+            Get-NetFirewallRule -DisplayGroup "File and Printer Sharing" |ft -AutoSize
+            Get-NetFirewallRule -DisplayGroup "Remote Service Management" |ft -AutoSize
+            Get-NetFirewallRule -DisplayGroup "Remote Event Log Management" |ft -AutoSize
+            "`n `n";
+            break;
+            }
+        2 {
+           "`n `n";
+            "Allowing MMC Firewall Stuff";
+            Set-NetFirewallRule -DisplayGroup "Windows Defender Firewall Remote Management" -Enabled True
+            Set-NetFirewallRule -DisplayGroup "Remote Volume Management" -Enabled True
+            Set-NetFirewallRule -DisplayGroup "Performance Logs and Alerts" -Enabled True
+            Set-NetFirewallRule -DisplayGroup "Remote Scheduled Tasks Management" -Enabled True
+            Set-NetFirewallRule -DisplayGroup "File and Printer Sharing" -Enabled True
+            Set-NetFirewallRule -DisplayGroup "Remote Service Management" -Enabled True
+            Set-NetFirewallRule -DisplayGroup "Remote Event Log Management" -Enabled True
+            Write-host "MMC Firewall Stuff is now Allowed";
+            "`n `n";
+            break;
+            } 
+        3 {
+            "`n `n";
+            "Blocking MMC Firewall Stuff";
+            Set-NetFirewallRule -DisplayGroup "Windows Defender Firewall Remote Management" -Enabled False
+            Set-NetFirewallRule -DisplayGroup "Remote Volume Management" -Enabled False
+            Set-NetFirewallRule -DisplayGroup "Performance Logs and Alerts" -Enabled False
+            Set-NetFirewallRule -DisplayGroup "Remote Scheduled Tasks Management" -Enabled False
+            Set-NetFirewallRule -DisplayGroup "File and Printer Sharing" -Enabled False
+            Set-NetFirewallRule -DisplayGroup "Remote Service Management" -Enabled False
+            Set-NetFirewallRule -DisplayGroup "Remote Event Log Management" -Enabled False
+            Write-host "MMC Firewall Stuff is now Blocked";
+            "`n `n";
+            break;
+          } 
+        exit {
+                exit;
+                break;
+            } 
+	    back {
+                clear;
+                $loop = 98;
+                break;
+            } 
+            default {
+            "** The selection could not be determined **";
+            break;
+            }
+            }}}
+#end of menu
     }
 }
 Start-Sleep -s 10?
