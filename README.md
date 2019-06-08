@@ -40,3 +40,9 @@ this is tool that does many things like firewall settings and timezones and slee
   * Block MMC Firewall Stuff
 ### possible issue
 * You may need to set your PowerShell Execution Policy to Remote Signed. Run this command to fix it Set-ExecutionPolicy RemoteSigned
+
+## Pulse_purge
+When Pulseway uninstalls it leave a bunch of junk behind this will nuke out the left over services and program files folder
+
+### possible issue
+you may get an error saying the service doesn't exist. There are instances when only one of the services exists. everything still works despite the error.
