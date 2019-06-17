@@ -1,5 +1,6 @@
 # Powershell
 
+
 ## Installed Programs
 this will list all the installed programs and save the list to C:\ as a CSV file
 ### known issues
@@ -40,6 +41,32 @@ this is tool that does many things like firewall settings and timezones and slee
   * Block MMC Firewall Stuff
 ### possible issue
 * You may need to set your PowerShell Execution Policy to Remote Signed. Run this command to fix it Set-ExecutionPolicy RemoteSigned
+
+## Sysinfo
+This will pull a bunch of system info and save it to a txt file in C:\temp (you can change this with $outfolder)
+Info this will pull
+*Hostname
+*Domain
+*Manufacturer
+*Model
+*SN
+*CPU
+*Disk Info in GB for all local disks includes Size, Used, Free, and Free in a precent.
+*Network info all the settings for all network devices.
+*Network Shares on the system
+*Scheduled Tasks in / (so it should be all the user created ones)
+### known issues
+* it will not list dumb programs that are installed to a user's AppData folder
+
+#Single Task
+A collection of scripts that usually do a single task or a very simple one.
+
+## Nuke WSUS
+will blow up any wsus setting from the registry
+
+### possible issue
+If there is no WSUS configured on the system it will error when trying to remoove the registry key.
+
 
 ## Pulse_purge
 When Pulseway uninstalls it leave a bunch of junk behind this will nuke out the left over services and program files folder
