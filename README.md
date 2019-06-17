@@ -45,20 +45,20 @@ this is tool that does many things like firewall settings and timezones and slee
 ## Sysinfo
 This will pull a bunch of system info and save it to a txt file in C:\temp (you can change this with $outfolder)
 Info this will pull
-*Hostname
-*Domain
-*Manufacturer
-*Model
-*SN
-*CPU
-*Disk Info in GB for all local disks includes Size, Used, Free, and Free in a precent.
-*Network info all the settings for all network devices.
-*Network Shares on the system
-*Scheduled Tasks in / (so it should be all the user created ones)
+* Hostname
+* Domain
+* Manufacturer
+* Model
+* SN
+* CPU
+* Disk Info in GB for all local disks includes Size, Used, Free, and Free in a precent.
+* Network info all the settings for all network devices.
+* Network Shares on the system
+* Scheduled Tasks in / (so it should be all the user created ones)
 ### known issues
-* it will not list dumb programs that are installed to a user's AppData folder
+* If no Scheduled Tasks exist in / it will still work but give an error.
 
-#Single Task
+# Single Task
 A collection of scripts that usually do a single task or a very simple one.
 
 ## Nuke WSUS
