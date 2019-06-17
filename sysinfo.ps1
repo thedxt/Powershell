@@ -4,13 +4,13 @@
 $outfolder = "C:\temp\"
 
 #file info stuff
+$system = Get-WmiObject -class Win32_ComputerSystem
 $filename = $system.Name
 $filetype = ".txt"
 $output = "$outfolder$filename$filetype"
 $date = get-date
 
 #grab most of the info
-$system = Get-WmiObject -class Win32_ComputerSystem
 $Bios = Get-WmiObject -Class Win32_BIOS
 $cpu = get-wmiobject Win32_Processor
 $Ipinfo = Get-NetIPConfiguration -Detailed
