@@ -1,3 +1,20 @@
+## DK Defaults
+Will turn on Remote Desktop with NLA and turns on file and printer sharing
+
+## File Perms
+Requires editing the powershell file for your setup. See the defining factors section in the script
+Intended for use with Domains and new folder setups.
+* Turns off inheritance and nukes out the permissions
+* sets the permissions
+ * System gets Full Control
+ * FC Group is for whatever you want to have Full Control
+ * RO Group is for whatever you want to have Read Only access (Includes Execute)
+ * RW is for whatever you want to have Read and Write access 
+
+### possible issue
+If you already have inheritance turned off it wont blow up the pervious permissions but will simply add the new ones.
+
+
 ## Nuke WSUS
 will blow up any wsus setting from the registry
 
