@@ -1,6 +1,6 @@
 # Powershell
 
-# Single Task
+## Single Task
 A collection of scripts that usually do a single task or a very simple one. Go to the folder for more.
 
 ## Installed Programs
