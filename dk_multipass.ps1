@@ -141,14 +141,14 @@ switch ($menu_1)
          1 {
             "`n `n";
             "Stauts of File and Printer Sharing Firewall Rules";
-            Get-NetFirewallRule -DisplayGroup "File and Printer Sharing" | Format-Table -Property DisplayName, Enabled
+            Get-NetFirewallRule -DisplayGroup "File and Printer Sharing*" | Format-Table -Property DisplayName, Enabled
             "`n `n";
             break;
             }
         2 {
            "`n `n";
             "Turning On File and Printer Sharing Firewall Rules";
-            Set-NetFirewallRule -DisplayGroup "File and Printer Sharing" -Enabled True
+            Set-NetFirewallRule -DisplayGroup "File and Printer Sharing*" -Enabled True
             Write-host "File and Printer Sharing Firewall Rules are On";
             "`n `n";
             break;
@@ -156,7 +156,7 @@ switch ($menu_1)
         3 {
             "`n `n";
             "Turning Off File and Printer Sharing Firewall Rules";
-            Set-NetFirewallRule -DisplayGroup "File and Printer Sharing" -Enabled False
+            Set-NetFirewallRule -DisplayGroup "File and Printer Sharing*" -Enabled False
             Write-host "File and Printer Sharing Firewall Rules are Off";
             "`n `n";
             break;
