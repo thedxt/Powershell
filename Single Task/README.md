@@ -5,8 +5,8 @@ A collection of scripts that usually do a single task or a very simple one.
 Will turn on Remote Desktop with NLA and turns on file and printer sharing
 
 ## File Perms
-Requires editing the powershell file for your setup. See the defining factors section in the script
-Intended for use with Domains and new folder setups.
+Requires editing the powershell file for your setup. See the defining factors section in the script. This script is intended for use with Domains and new folder setups.
+
 * Turns off inheritance and nukes out the permissions
 * sets the permissions
   * System gets Full Control
