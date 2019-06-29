@@ -1,5 +1,7 @@
 # Powershell
 
+# Single Task
+A collection of scripts that usually do a single task or a very simple one. Go to the folder for more.
 
 ## Installed Programs
 this will list all the installed programs and save the list to C:\ as a CSV file
@@ -57,6 +59,3 @@ Info this will pull
 * Scheduled Tasks in / (so it should be all the user created ones)
 ### known issues
 * If no Scheduled Tasks exist in / it will still work but give an error.
-
-# Single Task
-A collection of scripts that usually do a single task or a very simple one. Go to the folder for more
