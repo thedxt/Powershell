@@ -4,6 +4,9 @@ A collection of scripts that usually do a single task or a very simple one.
 ## DK Defaults
 Will turn on Remote Desktop with NLA and turns on file and printer sharing
 
+## Disable Auto Updates
+This will turn off Windows Auto Updates. It will check if the Reg Key for Auto updates already exists. If it exists it will only update the Auto Update value. If the key does not exist it will create it.
+
 ## File Perms
 Requires editing the powershell file for your setup. See the defining factors section in the script. This script is intended for use with Domains and new folder setups.
 
