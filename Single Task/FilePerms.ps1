@@ -6,9 +6,9 @@
 
 #defining factors
 $folder = "E:\Shares\"
-$FCGroup = "DOAMIN\Something - FC"
-$ROGroup = "DOAMIN\Something - RO"
-$RWGroup = "DOAMIN\Something - RW"
+$FCGroup = "DOMAIN\Something - FC"
+$ROGroup = "DOMAIN\Something - RO"
+$RWGroup = "DOMAIN\Something - RW"
 
 #scripy mcscript stuff
 $systemgroup = "SYSTEM"
