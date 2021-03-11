@@ -20,6 +20,9 @@ Requires editing the powershell file for your setup. See the defining factors se
 ### possible issue
 If you already have inheritance turned off it wont blow up the pervious permissions but will simply add the new ones.
 
+## SMB Open Finder
+Run as admin on a system that has SMB shares. Change what to the open file/folder you are trying to find. It will list the usernames of the people that have the file or folder open
+
 
 ## Nuke WSUS
 will blow up any wsus setting from the registry
