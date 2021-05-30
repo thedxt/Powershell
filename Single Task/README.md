@@ -30,6 +30,8 @@ will blow up any wsus setting from the registry
 ### possible issue
 If there is no WSUS configured on the system it will error when trying to remoove the registry key.
 
+## WAC SSO
+Run on a domain controller as admin. This will enable WAC SSO to the server using Kerberos constrained delegation.
 
 ## Pulse_purge
 When Pulseway uninstalls it leave a bunch of junk behind this will nuke out the left over services and program files folder
