@@ -33,6 +33,9 @@ If there is no WSUS configured on the system it will error when trying to remoov
 ## WAC SSO
 Run on a domain controller as admin. This will enable WAC SSO to the server using Kerberos constrained delegation.
 
+## Win 11 Taskbar Left
+Set the taskbar to the left in Windows 11
+
 ## Pulse purge
 Pulseway RMM Removal tool this will remove Pulseway and cleanup any leftovers from the uninstall
 
