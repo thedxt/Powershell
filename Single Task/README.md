@@ -36,6 +36,11 @@ Run on a domain controller as admin. This will enable WAC SSO to the server usin
 ## Win 11 Taskbar Left
 Set the taskbar to the left in Windows 11
 
+## Pre upgrade info
+Exports out the BuildLabEx, the EditionID, the System Info, and all the IP config. Useful to do before running an in place upgrade on a server. You should copy the files off the server before doing the upgrade.
+
+Link to more info about in place upgrades https://docs.microsoft.com/en-us/windows-server/upgrade/upgrade-2016-to-2019
+
 ## Pulse purge
 Pulseway RMM Removal tool this will remove Pulseway and cleanup any leftovers from the uninstall
 
