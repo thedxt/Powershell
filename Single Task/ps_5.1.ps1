@@ -1,4 +1,4 @@
-# Powershe 5.1 Install
+# PowerShell 5.1 Install
 # Installes PowerShell 5.1
 # author theDXT
 
