@@ -41,6 +41,11 @@ Exports out the BuildLabEx, the EditionID, the System Info, and all the IP confi
 
 Link to more info about in place upgrades https://docs.microsoft.com/en-us/windows-server/upgrade/upgrade-2016-to-2019
 
+## PS 5.1
+Installs PowerShell 5.1 by using PowerShell. Useful on Server 2012 R2
+
+Other versions of PowerShell 5.1 https://docs.microsoft.com/en-us/powershell/scripting/windows-powershell/wmf/setup/install-configure?#download-and-install-the-wmf-51-package
+
 ## Pulse purge
 Pulseway RMM Removal tool this will remove Pulseway and cleanup any leftovers from the uninstall
 
