@@ -2,10 +2,6 @@
 # uninstalls Pulseway
 # author theDXT
 
-# Pulse Purge
-# uninstalls Pulseway
-# author theDXT
-
 # find pulseway reg info
 $PulseReg = Get-ChildItem -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall | Get-ItemProperty | Where-Object {$_.DisplayName -match 'Pulseway'}
 
