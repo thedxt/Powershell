@@ -15,7 +15,7 @@ Stop-Service "PC Monitor"
 # kill pulseway processes
 Get-Process | Where {$_.ProcessName -Like "PCMonitorSrv"} | Stop-Process -force
 Get-Process | Where {$_.ProcessName -Like "pcmontask"} | Stop-Process -force
-Wirte-host "Pulseway PC Monitor Service disabled"
+write-host "Pulseway PC Monitor Service disabled"
 }else
 {
 write-host "Disabling of Pulseway PC Monitor Service NOT needed"
