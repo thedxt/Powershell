@@ -7,7 +7,7 @@ $PulseReg = Get-ChildItem -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\
 
 if (Get-Service "PC Monitor" -ErrorAction SilentlyContinue)
 {
- Wirte-host "Pulseway PC Monitor Service found"
+ write-host "Pulseway PC Monitor Service found"
  # kill pulseway service
 Set-Service "PC Monitor" -StartupType Disabled
 Stop-Service "PC Monitor"
@@ -74,9 +74,9 @@ Remove-Item "C:\Users\Public\Desktop\Pulseway Manager.lnk" -ErrorAction silently
 # delete pulseway service
 if (Get-Service "PC Monitor" -ErrorAction SilentlyContinue)
 {
-Wirte-host "Pulseway PC Monitor Service still found"
+write-host "Pulseway PC Monitor Service still found"
 sc.exe delete "PC Monitor" | out-null
-Wirte-host "Pulseway PC Monitor Service deleted"
+write-host "Pulseway PC Monitor Service deleted"
 }else
 {
 write-host "Pulseway PC Monitor Service NOT found"
@@ -85,9 +85,9 @@ write-host "Pulseway PC Monitor Service NOT found"
 # delete pulseway service
 if (Get-Service "PulsewayDeploymentService" -ErrorAction SilentlyContinue)
 {
-Wirte-host "Pulseway PulsewayDeploymentService Service still found"
+write-host "Pulseway PulsewayDeploymentService Service still found"
 sc.exe delete "PulsewayDeploymentService" | out-null
-Wirte-host "Pulseway PulsewayDeploymentService Service deleted"
+write-host "Pulseway PulsewayDeploymentService Service deleted"
 }else
 {
 write-host "Pulseway PulsewayDeploymentService Service NOT found"
