@@ -2,6 +2,10 @@
 # uninstalls Pulseway
 # author theDXT
 
+# Pulse Purge
+# uninstalls Pulseway
+# author theDXT
+
 # find pulseway reg info
 $PulseReg = Get-ChildItem -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall | Get-ItemProperty | Where-Object {$_.DisplayName -match 'Pulseway'}
 
@@ -38,12 +42,12 @@ msiexec.exe /x $PulseReg.PSChildName /qn
 start-sleep -s 45
 }
 
-
+$PulseRegCheck2 = Get-ChildItem -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall | Get-ItemProperty | Where-Object {$_.DisplayName -match 'Pulseway'}
 # test if there are reg leftovers from the normal uninstall and clean up
-if ($PulseReg.PSpath)
+if ($PulseRegCheck2.PSpath)
 {
 write-host "cleaning up the fallout"
-remove-item -path $PulseReg.PSPath
+remove-item -path $PulseRegCheck2.PSPath
 }
 
 # kill pulseway folders
