@@ -36,6 +36,9 @@ Run on a domain controller as admin. This will enable WAC SSO to the server usin
 ## Win 11 Taskbar Left
 Set the taskbar to the left in Windows 11
 
+## Hidden Installs
+Lists all programs that are hidden (aka listed as SystemComponent) and ignores null entries
+
 ## Pre upgrade info
 Exports out the BuildLabEx, the EditionID, the System Info, and all the IP config. Useful to do before running an in place upgrade on a server. You should copy the files off the server before doing the upgrade.
 
