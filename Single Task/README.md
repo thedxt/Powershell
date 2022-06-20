@@ -34,6 +34,9 @@ will blow up any wsus setting from the registry
 ### possible issue
 If there is no WSUS configured on the system it will error when trying to remoove the registry key.
 
+## Veeam_365_KB4326.ps1
+Quick PowerShell script to install the KB4326 patch from Veeam https://www.veeam.com/kb4326
+
 ## WAC SSO
 Run on a domain controller as admin. This will enable WAC SSO to the server using Kerberos constrained delegation.
 
