@@ -23,6 +23,8 @@ If you already have inheritance turned off it wont blow up the pervious permissi
 ## SMB Open Finder
 Run as admin on a system that has SMB shares. Change what to the open file/folder you are trying to find. It will list the usernames of the people that have the file or folder open
 
+## Lock-Win10-Release
+will check if the system is Windows 10 then will stop Windows update then will tweak the registry settings to lock the system to Windows 10 21H2 and then it will start Windows updates. No reboots needed.
 
 ## Nuke WSUS
 will blow up any wsus setting from the registry
