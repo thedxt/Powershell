@@ -25,7 +25,7 @@ Run as admin on a system that has SMB shares. Change what to the open file/folde
 
 ## Lock-Win10-Release
 
-This script will check if the system is Windows 10. It will then stop the Windows update service. It will then make the changes needed in the registry to lock the system to Windows 10 and the release 21H2. Afte that it will start the Windows update service again. No reboots are needed.
+This script will check if the system is Windows 10. It will then stop the Windows update service. It will then make the changes needed in the registry to lock the system to Windows 10 and the release 21H2. After that it will start the Windows update service again. No reboots are needed.
 
 
 ## Nuke WSUS
