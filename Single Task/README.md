@@ -24,7 +24,9 @@ If you already have inheritance turned off it wont blow up the pervious permissi
 Run as admin on a system that has SMB shares. Change what to the open file/folder you are trying to find. It will list the usernames of the people that have the file or folder open
 
 ## Lock-Win10-Release
-will check if the system is Windows 10 then will stop Windows update then will tweak the registry settings to lock the system to Windows 10 21H2 and then it will start Windows updates. No reboots needed.
+
+This script will check if the system is Windows 10. It will then stop the Windows update service. It will then make the changes needed in the registry to lock the system to Windows 10 and the release 21H2. Afte that it will start the Windows update service again. No reboots are needed.
+
 
 ## Nuke WSUS
 will blow up any wsus setting from the registry
