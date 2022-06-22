@@ -43,6 +43,9 @@ Run on a domain controller as admin. This will enable WAC SSO to the server usin
 ## Win 11 Taskbar Left
 Set the taskbar to the left in Windows 11
 
+## files folder export
+will list out all the files and folders to a csv file for the path that you give it.
+
 ## Hidden Installs
 Lists all programs that are hidden (aka listed as SystemComponent) and ignores null entries
 
