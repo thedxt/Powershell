@@ -21,7 +21,9 @@ Requires editing the powershell file for your setup. See the defining factors se
 If you already have inheritance turned off it wont blow up the pervious permissions but will simply add the new ones.
 
 ## SMB Open Finder
-Run as admin on a system that has SMB shares. Change what to the open file/folder you are trying to find. It will list the usernames of the people that have the file or folder open
+Run as admin on a system that has SMB shares. Change what to the open file/folder you are trying to find. It will list the usernames of the people that have the file or folder open.
+
+Can also close the open file/folder if needed. (you need to uncomment the last line if you want to do that)
 
 ## Lock-Win10-Release
 
@@ -33,9 +35,6 @@ will blow up any wsus setting from the registry
 
 ### possible issue
 If there is no WSUS configured on the system it will error when trying to remoove the registry key.
-
-## Veeam_365_KB4326.ps1
-Quick PowerShell script to install the KB4326 patch from Veeam https://www.veeam.com/kb4326
 
 ## WAC SSO
 Run on a domain controller as admin. This will enable WAC SSO to the server using Kerberos constrained delegation.
