@@ -1,6 +1,9 @@
 # Single Task
 A collection of scripts that usually do a single task or a very simple one.
 
+## BASupSrvcCnfg_focus_kill.ps1
+Kills off BASupSrvcCnfg as it randomly steals focus
+
 ## DK Defaults
 Will turn on Remote Desktop with NLA and turns on file and printer sharing
 
