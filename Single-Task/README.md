@@ -45,6 +45,9 @@ Run on a domain controller as admin. This will enable WAC SSO to the server usin
 ## Win 11 Taskbar Left
 Set the taskbar to the left in Windows 11
 
+## chkdsk_reboot.ps1
+Runs chkdsk on C drive on next reboot and reboots the PC
+
 ## files folder export
 will list out all the files and folders to a csv file for the path that you give it.
 
