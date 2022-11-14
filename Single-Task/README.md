@@ -69,3 +69,7 @@ Pulseway RMM Removal tool this will remove Pulseway and cleanup any leftovers fr
 
 ### possible issue
 you may get an error saying the service doesn't exist. There are instances when only one of the services exists. everything still works despite the error.
+
+## sfc_scannow_reboot
+runs sfc scan now and reboots when done
+
