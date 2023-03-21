@@ -25,7 +25,7 @@ new-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" | Out-N
 
 # sets the reg settings to lock it to Win 10 and a specific release
 new-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" -Name TargetReleaseVersion -Value 1 -Type DWORD -Force | Out-Null
-new-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" -Name TargetReleaseVersionInfo -Value 21H2 -Type String -Force | Out-Null
+new-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" -Name TargetReleaseVersionInfo -Value 22H2 -Type String -Force | Out-Null
 new-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" -Name ProductVersion -Value "Windows 10" -Type String -Force | Out-Null
 
 # Start Windows update service
